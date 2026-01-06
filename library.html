@@ -2,63 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Music Library</title>
-<link rel="stylesheet" href="css/style.css">
+  <title>Library</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-  <h1>🎶 Music Library</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="library.html">Library</a>
-    <a href="favourites.html">Favourites</a>
-    <a href="most-played.html">Most Played</a>
-    <a href="seasonal.html">Seasonal</a>
-  </nav>
+  <div class="navbar">
+    <div class="brand">🎵 Music Player</div>
+    <nav class="nav-links">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="library.html">Library</a>
+      <a class="nav-link" href="favourites.html">Favourites</a>
+      <a class="nav-link" href="most-played.html">Most Played</a>
+      <a class="nav-link" href="seasonal.html">Seasonal</a>
+    </nav>
+  </div>
 </header>
 
 <main>
-
-  <section aria-label="Add Song">
-    <h2>Add New Song</h2>
-    <form>
-      <label>Song File</label><br>
-      <input type="file" accept="audio/*"><br><br>
-
-      <label>Song Title</label><br>
-      <input type="text" placeholder="Enter song title"><br><br>
-
-      <label>Artist Name</label><br>
-      <input type="text" placeholder="Enter artist name"><br><br>
-
-      <label>Season</label><br>
-      <select>
-        <option>Winter</option>
-        <option>Summer</option>
-        <option>Monsoon</option>
-        <option>Party</option>
-      </select><br><br>
-
-      <button type="submit">Add Song</button>
-    </form>
-  </section>
-
-  <section aria-label="All Songs List">
-    <h2>All Songs</h2>
-    <ul>
-      <li>Perfect – Ed Sheeran</li>
-      <li>Shape of You – Ed Sheeran</li>
-      <li>Let Me Down Slowly – Alec Benjamin</li>
-    </ul>
-  </section>
-
+<section>
+  <h2>Your Songs</h2>
+  <div class="song-list">
+    <div class="song-card"><h3>Perfect</h3><p>Ed Sheeran</p></div>
+    <div class="song-card"><h3>Shape of You</h3><p>Ed Sheeran</p></div>
+    <div class="song-card"><h3>Let Me Down Slowly</h3><p>Alec Benjamin</p></div>
+    <div class="song-card"><h3>Someone You Loved</h3><p>Lewis Capaldi</p></div>
+  </div>
+</section>
 </main>
 
-<footer>
-  <p>Manage your music collection</p>
-</footer>
-
+<footer>© Advanced Music Player</footer>
 </body>
 </html>
-

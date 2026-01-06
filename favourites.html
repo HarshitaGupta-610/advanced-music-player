@@ -4,45 +4,50 @@
   <meta charset="UTF-8">
   <title>Favourite Songs</title>
   <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
 
 <header>
-  <h1>❤️ Favourite Songs</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="library.html">Library</a>
-    <a href="favourites.html">Favourites</a>
-    <a href="most-played.html">Most Played</a>
-    <a href="seasonal.html">Seasonal</a>
-  </nav>
+  <div class="navbar">
+    <div class="brand">🎵 Music Player</div>
+    <nav class="nav-links">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="library.html">Library</a>
+      <a class="nav-link" href="favourites.html">Favourites</a>
+      <a class="nav-link" href="most-played.html">Most Played</a>
+      <a class="nav-link" href="seasonal.html">Seasonal</a>
+    </nav>
+  </div>
 </header>
 
 <main>
+  <section>
+    <h2>Favourite Songs</h2>
 
-  <section aria-label="Favourite Songs">
-    <h2>Your Favourites</h2>
-    <ul>
-      <li>
-        Perfect – Ed Sheeran
-        <button>▶ Play</button>
-        <button>❌ Remove</button>
-      </li>
-      <li>
-        Let Me Down Slowly – Alec Benjamin
-        <button>▶ Play</button>
-        <button>❌ Remove</button>
-      </li>
-    </ul>
+    <div class="song-list">
+      <div class="song-card">
+        <h3>Perfect</h3>
+        <p>Ed Sheeran</p>
+      </div>
+      <div class="song-card">
+        <h3>Someone You Loved</h3>
+        <p>Lewis Capaldi</p>
+      </div>
+      <div class="song-card">
+        <h3>Let Me Down Slowly</h3>
+        <p>Alec Benjamin</p>
+      </div>
+      <div class="song-card">
+        <h3>Night Changes</h3>
+        <p>One Direction</p>
+      </div>
+    </div>
   </section>
-
 </main>
 
 <footer>
-  <p>Your liked music in one place</p>
+  © Advanced Music Player — Favourite Collection
 </footer>
 
 </body>
 </html>
-

@@ -1,54 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Advanced Music Player | Home</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <title>Music Player</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <header>
-  <h1>🎵 Advanced Music Player</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="library.html">Library</a>
-    <a href="favourites.html">Favourites</a>
-    <a href="most-played.html">Most Played</a>
-    <a href="seasonal.html">Seasonal</a>
-  </nav>
+  <div class="navbar">
+    <div class="logo">🎵 Music Player</div>
+
+    <nav class="nav-links">
+      <a href="#" class="nav-link active">Home</a>
+      <a href="library.html" class="nav-link">Library</a>
+      <a href="favourites.html" class="nav-link">Favourites</a>
+      <a href="most-played.html" class="nav-link">Most Played</a>
+      <a href="seasonal.html" class="nav-link">Seasonal</a>
+    </nav>
+  </div>
 </header>
 
+<!-- ================= MAIN ================= -->
 <main>
 
-  <section aria-label="Now Playing">
-    <h2>Now Playing</h2>
-    <p><strong>Song:</strong> Perfect</p>
-    <p><strong>Artist:</strong> Ed Sheeran</p>
+  <!-- TOP SECTION -->
+  <section class="top-section">
+
+    <!-- TIME CARD -->
+    <div class="card time-card">
+      <h3>Current Time</h3>
+      <p class="time">--:--</p>
+    </div>
+
+    <!-- NOW PLAYING -->
+    <div class="card now-playing">
+      <h3>Now Playing</h3>
+
+      <p><strong>Song:</strong> <span class="now-song">Perfect</span></p>
+      <p><strong>Artist:</strong> <span class="now-artist">Ed Sheeran</span></p>
+      <p><strong>Season:</strong> <span class="now-season">Romantic</span></p>
+
+      <!-- CONTROLS -->
+      <div class="controls">
+        <button onclick="prevSong()">⏮</button>
+        <button onclick="togglePlay(this)">▶</button>
+        <button onclick="nextSong()">⏭</button>
+        <button onclick="toggleFavourite(this)">❤️</button>
+      </div>
+
+      <!-- PROGRESS -->
+      <div class="slider">
+        <label>Progress</label>
+        <input type="range" min="0" max="100" value="30">
+      </div>
+
+      <!-- VOLUME -->
+      <div class="slider">
+        <label>Volume</label>
+        <input type="range" min="0" max="100" value="70">
+      </div>
+    </div>
+
   </section>
 
-  <section aria-label="Player Controls">
-    <button>⏮ Previous</button>
-    <button>▶ Play</button>
-    <button>⏭ Next</button>
-    <button>❤️ Favourite</button>
-  </section>
+  <!-- RECOMMENDED -->
+  <section>
+    <h2>Recommended For You</h2>
 
-  <section aria-label="Progress Bar">
-    <label for="progress">Progress</label>
-    <input type="range" id="progress" min="0" max="100">
-  </section>
+    <div class="song-list">
+      <div class="song-card">
+        <h3>Believer</h3>
+        <p>Imagine Dragons</p>
+        <span>Energetic</span>
+      </div>
 
-  <section aria-label="Volume Control">
-    <label for="volume">Volume</label>
-    <input type="range" id="volume" min="0" max="100">
+      <div class="song-card">
+        <h3>Levitating</h3>
+        <p>Dua Lipa</p>
+        <span>Party</span>
+      </div>
+
+      <div class="song-card">
+        <h3>Blinding Lights</h3>
+        <p>The Weeknd</p>
+        <span>Night</span>
+      </div>
+
+      <div class="song-card">
+        <h3>Someone You Loved</h3>
+        <p>Lewis Capaldi</p>
+        <span>Sad</span>
+      </div>
+    </div>
   </section>
 
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer>
-  <p>Built using HTML5, CSS & JavaScript</p>
+  © 2026 Music Player — Crafted with ❤️
 </footer>
 
+<script src="js/script.js"></script>
 </body>
 </html>
 
