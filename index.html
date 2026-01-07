@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Music Player</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harmony Player</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
@@ -11,91 +11,108 @@
 
 <body class="dark">
 
-<!-- TOP BAR -->
+<!-- ================= TOP BAR ================= -->
 <header class="topbar">
   <div class="topbar-left">
+    <!-- MENU BUTTON -->
     <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <!-- APP NAME -->
     <div class="app-title">🎵 Harmony Player</div>
   </div>
 
-  <div class="account">
+  <!-- ACCOUNT (CLICKABLE) -->
+  <div class="account" id="accountBtn" onclick="openAccount()">
     <span>👤</span>
     <span>Your Account</span>
   </div>
 </header>
 
-<!-- MAIN LAYOUT -->
+<!-- ================= MAIN LAYOUT ================= -->
 <div class="container">
 
-  <!-- SIDEBAR -->
+  <!-- ========== SIDEBAR ========== -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-title">Navigation</div>
-    <a class="active" href="#">🏠 Home</a>
-    <a href="#">📚 Library</a>
-    <a href="#">❤️ Favourites</a>
-    <a href="#">🔥 Most Played</a>
-    <a href="#">🎄 Seasonal</a>
+
+    <a class="active" href="index.html">🏠 Home</a>
+    <a href="library.html">📚 Library</a>
+    <a href="favourites.html">❤️ Favourites</a>
+    <a href="most-played.html">🔥 Most Played</a>
+    <a href="seasonal.html">🎄 Seasonal</a>
   </aside>
 
-  <!-- MAIN CONTENT -->
+  <!-- ========== MAIN CONTENT ========== -->
   <main class="main">
 
     <!-- NOW PLAYING -->
     <section class="card now-playing">
       <div class="card-content">
-        <h3 style="opacity: 0.9; margin-bottom: 10px;">NOW PLAYING</h3>
+
+        <h3 style="opacity:0.9; margin-bottom:10px;">NOW PLAYING</h3>
 
         <div class="song-info">
           <div class="album-art">🎵</div>
+
           <div class="song-details">
             <h2>Blinding Lights</h2>
             <div class="artist-name">The Weeknd</div>
           </div>
         </div>
 
+        <!-- PROGRESS -->
         <div class="progress-section">
           <div class="progress-bar">
             <div class="progress-fill"></div>
           </div>
+
           <div class="time-labels">
             <span>1:23</span>
             <span>3:42</span>
           </div>
         </div>
 
+        <!-- CONTROLS -->
         <div class="controls">
           <button>⏮</button>
           <button class="play-btn">▶</button>
           <button>⏭</button>
           <button>❤️</button>
         </div>
+
       </div>
     </section>
 
     <!-- INFO ROW -->
     <section class="info-row">
+
       <div class="info-card">
         <h3>Current Season</h3>
         <p>❄️ Winter</p>
       </div>
+
       <div class="info-card">
         <h3>Current Time</h3>
         <p id="time">--:--</p>
       </div>
+
       <div class="info-card">
         <h3>Songs Played</h3>
         <p>127</p>
       </div>
-    </section>
 
+    </section>
   </main>
 
-  <!-- RIGHT PANEL -->
+  <!-- ========== RIGHT PANEL ========== -->
   <aside class="right-panel">
-    <div class="search-box" onclick="alert('Search functionality')">
+
+    <!-- SEARCH -->
+    <div class="search-box" onclick="goToLibrary()">
       🔍 Search Songs
     </div>
 
+    <!-- POPULAR -->
     <div class="trend-card">
       <h3>🔥 Popular Now</h3>
       <ul>
@@ -106,6 +123,7 @@
       </ul>
     </div>
 
+    <!-- ARTISTS -->
     <div class="trend-card">
       <h3>⭐ Trending Artists</h3>
       <ul>
@@ -115,17 +133,18 @@
         <li>👤 Taylor Swift</li>
       </ul>
     </div>
-  </aside>
 
+  </aside>
 </div>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer>
   <span>Made with Harmony & Music 🎶</span>
   <button onclick="toggleTheme()">🌗 Toggle Theme</button>
 </footer>
 
-<!-- JS -->
+<!-- ================= JS ================= -->
 <script src="js/script.js"></script>
+
 </body>
 </html>

@@ -2,45 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Music Player – Library</title>
+  <title>Library – Harmony Player</title>
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/script.js"></script>
 </head>
-<body>
 
-<header class="top-bar">
-  <div class="menu-btn">☰ Menu</div>
-  <div class="logo">🎵 Music Player</div>
-  <div class="account">Your Account</div>
+<body class="dark">
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <div class="app-title">🎵 Harmony Player</div>
+  </div>
+
+  <div class="account" id="accountBtn">
+    <span>👤</span>
+    <span>Your Account</span>
+  </div>
 </header>
 
-<div class="layout">
+<div class="container">
 
-  <aside class="sidebar">
-    <a href="index.html">Home</a>
-    <a href="library.html" class="active">Library</a>
-    <a href="favourites.html">Favourites</a>
-    <a href="most-played.html">Most Played</a>
-    <a href="seasonal.html">Seasonal</a>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-title">Navigation</div>
+    <a href="index.html">🏠 Home</a>
+    <a class="active" href="library.html">📚 Library</a>
+    <a href="favourites.html">❤️ Favourites</a>
+    <a href="most-played.html">🔥 Most Played</a>
+    <a href="seasonal.html">🎄 Seasonal</a>
   </aside>
 
-  <main class="content">
-    <h2>Library</h2>
-
-    <input type="text" class="search-input" placeholder="Search songs...">
-
-    <div class="list">
-      <div class="list-item">Perfect – Ed Sheeran</div>
-      <div class="list-item">Believer – Imagine Dragons</div>
-      <div class="list-item">Let Me Down Slowly – Alec Benjamin</div>
-      <div class="list-item">Levitating – Dua Lipa</div>
-    </div>
+  <main class="main">
+    <section class="card">
+      <h2>📚 Your Library</h2>
+      <div class="trend-card">
+        <ul>
+          <li>🎵 Perfect – Ed Sheeran</li>
+          <li>🎵 Believer – Imagine Dragons</li>
+          <li>🎵 Levitating – Dua Lipa</li>
+          <li>🎵 Let Me Down Slowly – Alec Benjamin</li>
+        </ul>
+      </div>
+    </section>
   </main>
+
+  <aside class="right-panel">
+    <div class="search-box">🔍 Search Library</div>
+  </aside>
 
 </div>
 
 <footer>
-  Made with ❤️ | library.html
+  <span>Library • Harmony Player</span>
+  <button onclick="toggleTheme()">🌗 Toggle Theme</button>
 </footer>
 
 </body>

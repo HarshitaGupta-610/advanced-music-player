@@ -2,55 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Most Played Songs</title>
+  <title>Most Played – Harmony Player</title>
   <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
 </head>
-<body>
 
-<header>
-  <div class="navbar">
-    <div class="brand">🎵 Music Player</div>
-    <nav class="nav-links">
-      <a class="nav-link" href="index.html">Home</a>
-      <a class="nav-link" href="library.html">Library</a>
-      <a class="nav-link" href="favourites.html">Favourites</a>
-      <a class="nav-link" href="most-played.html">Most Played</a>
-      <a class="nav-link" href="seasonal.html">Seasonal</a>
-    </nav>
+<body class="dark">
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <div class="app-title">🎵 Harmony Player</div>
+  </div>
+
+  <div class="account" id="accountBtn">
+    <span>👤</span>
+    <span>Your Account</span>
   </div>
 </header>
 
-<main>
-  <section>
-    <h2>Most Played Songs</h2>
+<div class="container">
 
-    <div class="song-list">
-      <div class="song-card">
-        <h3>Shape of You</h3>
-        <p>Ed Sheeran</p>
-      </div>
-      <div class="song-card">
-        <h3>Blinding Lights</h3>
-        <p>The Weeknd</p>
-      </div>
-      <div class="song-card">
-        <h3>Believer</h3>
-        <p>Imagine Dragons</p>
-      </div>
-      <div class="song-card">
-        <h3>Levitating</h3>
-        <p>Dua Lipa</p>
-      </div>
-      <div class="song-card">
-        <h3>Senorita</h3>
-        <p>Shawn Mendes</p>
-      </div>
-    </div>
-  </section>
-</main>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-title">Navigation</div>
+    <a href="index.html">🏠 Home</a>
+    <a href="library.html">📚 Library</a>
+    <a href="favourites.html">❤️ Favourites</a>
+    <a class="active" href="most-played.html">🔥 Most Played</a>
+    <a href="seasonal.html">🎄 Seasonal</a>
+  </aside>
+
+  <main class="main">
+    <section class="card">
+      <h2>🔥 Most Played</h2>
+      <ul>
+        <li>🎵 Blinding Lights – 120 plays</li>
+        <li>🎵 Flowers – 98 plays</li>
+        <li>🎵 Calm Down – 76 plays</li>
+      </ul>
+    </section>
+  </main>
+
+  <aside class="right-panel"></aside>
+</div>
 
 <footer>
-  © Advanced Music Player — Most Played
+  <span>Most Played • Harmony Player</span>
+  <button onclick="toggleTheme()">🌗 Toggle Theme</button>
 </footer>
 
 </body>

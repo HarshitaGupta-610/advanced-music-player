@@ -3,6 +3,7 @@
   --darker: #16213e;
   --primary: #0f3460;
   --accent: #e94560;
+  --accent-soft: #ff6b81;
   --accent-hover: #ff6b81;
   --light: #eaeaea;
   --card-bg: #252a48;
@@ -25,18 +26,18 @@ body {
   overflow-x: hidden;
 }
 
+/* ✅ SINGLE LIGHT MODE OVERRIDE */
 body.light {
   --dark: #f5f7fa;
   --darker: #e4e9f0;
   --primary: #5e72e4;
-  --card-bg: #ffffff;
+  --accent: #865DFF;
+  --accent-soft: #E384FF;
   --light: #2d3748;
+  --card-bg: #ffffff;
   --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 12px 48px rgba(0, 0, 0, 0.15);
 }
-
-/* ALL remaining CSS exactly the same as you provided */
-/* (No change, no removal, no formatting differences) */
 
 /* TOP BAR */
 .topbar {
@@ -151,6 +152,7 @@ body.light {
   to { transform: rotate(360deg); }
 }
 
+/* PROGRESS */
 .progress-bar {
   height: 6px;
   background: rgba(255,255,255,0.25);
@@ -164,6 +166,7 @@ body.light {
   background: white;
 }
 
+/* CONTROLS */
 .controls {
   display: flex;
   justify-content: center;

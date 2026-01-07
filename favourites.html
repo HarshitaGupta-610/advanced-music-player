@@ -2,51 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Favourite Songs</title>
+  <title>Favourites – Harmony Player</title>
   <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
 </head>
-<body>
 
-<header>
-  <div class="navbar">
-    <div class="brand">🎵 Music Player</div>
-    <nav class="nav-links">
-      <a class="nav-link" href="index.html">Home</a>
-      <a class="nav-link" href="library.html">Library</a>
-      <a class="nav-link" href="favourites.html">Favourites</a>
-      <a class="nav-link" href="most-played.html">Most Played</a>
-      <a class="nav-link" href="seasonal.html">Seasonal</a>
-    </nav>
+<body class="dark">
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <div class="app-title">🎵 Harmony Player</div>
+  </div>
+
+  <div class="account" id="accountBtn">
+    <span>👤</span>
+    <span>Your Account</span>
   </div>
 </header>
 
-<main>
-  <section>
-    <h2>Favourite Songs</h2>
+<div class="container">
 
-    <div class="song-list">
-      <div class="song-card">
-        <h3>Perfect</h3>
-        <p>Ed Sheeran</p>
-      </div>
-      <div class="song-card">
-        <h3>Someone You Loved</h3>
-        <p>Lewis Capaldi</p>
-      </div>
-      <div class="song-card">
-        <h3>Let Me Down Slowly</h3>
-        <p>Alec Benjamin</p>
-      </div>
-      <div class="song-card">
-        <h3>Night Changes</h3>
-        <p>One Direction</p>
-      </div>
-    </div>
-  </section>
-</main>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-title">Navigation</div>
+    <a href="index.html">🏠 Home</a>
+    <a href="library.html">📚 Library</a>
+    <a class="active" href="favourites.html">❤️ Favourites</a>
+    <a href="most-played.html">🔥 Most Played</a>
+    <a href="seasonal.html">🎄 Seasonal</a>
+  </aside>
+
+  <main class="main">
+    <section class="card">
+      <h2>❤️ Favourite Songs</h2>
+      <ul>
+        <li>🎶 Blinding Lights</li>
+        <li>🎶 Anti‑Hero</li>
+        <li>🎶 Calm Down</li>
+      </ul>
+    </section>
+  </main>
+
+  <aside class="right-panel"></aside>
+</div>
 
 <footer>
-  © Advanced Music Player — Favourite Collection
+  <span>Favourites • Harmony Player</span>
+  <button onclick="toggleTheme()">🌗 Toggle Theme</button>
 </footer>
 
 </body>
