@@ -2,77 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Music Library</title>
-<link rel="stylesheet" href="css/style.css">
+  <title>Music Player – Library</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
 </head>
 <body>
 
-<header>
-  <h1>🎶 Music Library</h1>
-  <nav>
+<header class="top-bar">
+  <div class="menu-btn">☰ Menu</div>
+  <div class="logo">🎵 Music Player</div>
+  <div class="account">Your Account</div>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar">
     <a href="index.html">Home</a>
-    <a href="library.html">Library</a>
+    <a href="library.html" class="active">Library</a>
     <a href="favourites.html">Favourites</a>
     <a href="most-played.html">Most Played</a>
     <a href="seasonal.html">Seasonal</a>
-  </nav>
-</header>
+  </aside>
 
-<main>
+  <main class="content">
+    <h2>Library</h2>
 
-  <!-- Add Song Section -->
-  <section aria-label="Add Song">
-    <h2>Add New Song</h2>
-    <form>
-      <label>Song File</label><br>
-      <input type="file" accept="audio/*"><br><br>
+    <input type="text" class="search-input" placeholder="Search songs...">
 
-      <label>Song Title</label><br>
-      <input type="text" placeholder="Enter song title"><br><br>
-
-      <label>Artist Name</label><br>
-      <input type="text" placeholder="Enter artist name"><br><br>
-
-      <label>Season</label><br>
-      <select>
-        <option>Winter</option>
-        <option>Summer</option>
-        <option>Monsoon</option>
-        <option>Party</option>
-      </select><br><br>
-
-      <button type="submit">Add Song</button>
-    </form>
-  </section>
-
-  <!-- Songs Display Section -->
-  <section aria-label="Your Songs">
-    <h2>Your Songs</h2>
-
-    <div class="song-list">
-      <div class="song-card">
-        <h3>Perfect</h3>
-        <p>Ed Sheeran</p>
-      </div>
-
-      <div class="song-card">
-        <h3>Shape of You</h3>
-        <p>Ed Sheeran</p>
-      </div>
-
-      <div class="song-card">
-        <h3>Let Me Down Slowly</h3>
-        <p>Alec Benjamin</p>
-      </div>
+    <div class="list">
+      <div class="list-item">Perfect – Ed Sheeran</div>
+      <div class="list-item">Believer – Imagine Dragons</div>
+      <div class="list-item">Let Me Down Slowly – Alec Benjamin</div>
+      <div class="list-item">Levitating – Dua Lipa</div>
     </div>
-  </section>
+  </main>
 
-</main>
+</div>
 
 <footer>
-  <p>Manage your music collection</p>
+  Made with ❤️ | library.html
 </footer>
 
 </body>
 </html>
-

@@ -1,109 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Music Player</title>
-  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
-<!-- ================= NAVBAR ================= -->
-<header>
-  <div class="navbar">
-    <div class="logo">🎵 Music Player</div>
+<body class="dark">
 
-    <nav class="nav-links">
-      <a href="#" class="nav-link active">Home</a>
-      <a href="library.html" class="nav-link">Library</a>
-      <a href="favourites.html" class="nav-link">Favourites</a>
-      <a href="most-played.html" class="nav-link">Most Played</a>
-      <a href="seasonal.html" class="nav-link">Seasonal</a>
-    </nav>
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <div class="app-title">🎵 Harmony Player</div>
+  </div>
+
+  <div class="account">
+    <span>👤</span>
+    <span>Your Account</span>
   </div>
 </header>
 
-<!-- ================= MAIN ================= -->
-<main>
+<!-- MAIN LAYOUT -->
+<div class="container">
 
-  <!-- TOP SECTION -->
-  <section class="top-section">
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-title">Navigation</div>
+    <a class="active" href="#">🏠 Home</a>
+    <a href="#">📚 Library</a>
+    <a href="#">❤️ Favourites</a>
+    <a href="#">🔥 Most Played</a>
+    <a href="#">🎄 Seasonal</a>
+  </aside>
 
-    <!-- TIME CARD -->
-    <div class="card time-card">
-      <h3>Current Time</h3>
-      <p class="time">--:--</p>
-    </div>
+  <!-- MAIN CONTENT -->
+  <main class="main">
 
     <!-- NOW PLAYING -->
-    <div class="card now-playing">
-      <h3>Now Playing</h3>
+    <section class="card now-playing">
+      <div class="card-content">
+        <h3 style="opacity: 0.9; margin-bottom: 10px;">NOW PLAYING</h3>
 
-      <p><strong>Song:</strong> <span class="now-song">Perfect</span></p>
-      <p><strong>Artist:</strong> <span class="now-artist">Ed Sheeran</span></p>
-      <p><strong>Season:</strong> <span class="now-season">Romantic</span></p>
+        <div class="song-info">
+          <div class="album-art">🎵</div>
+          <div class="song-details">
+            <h2>Blinding Lights</h2>
+            <div class="artist-name">The Weeknd</div>
+          </div>
+        </div>
 
-      <!-- CONTROLS -->
-      <div class="controls">
-        <button onclick="prevSong()">⏮</button>
-        <button onclick="togglePlay(this)">▶</button>
-        <button onclick="nextSong()">⏭</button>
-        <button onclick="toggleFavourite(this)">❤️</button>
+        <div class="progress-section">
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          <div class="time-labels">
+            <span>1:23</span>
+            <span>3:42</span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button>⏮</button>
+          <button class="play-btn">▶</button>
+          <button>⏭</button>
+          <button>❤️</button>
+        </div>
       </div>
+    </section>
 
-      <!-- PROGRESS -->
-      <div class="slider">
-        <label>Progress</label>
-        <input type="range" min="0" max="100" value="30">
+    <!-- INFO ROW -->
+    <section class="info-row">
+      <div class="info-card">
+        <h3>Current Season</h3>
+        <p>❄️ Winter</p>
       </div>
+      <div class="info-card">
+        <h3>Current Time</h3>
+        <p id="time">--:--</p>
+      </div>
+      <div class="info-card">
+        <h3>Songs Played</h3>
+        <p>127</p>
+      </div>
+    </section>
 
-      <!-- VOLUME -->
-      <div class="slider">
-        <label>Volume</label>
-        <input type="range" min="0" max="100" value="70">
-      </div>
+  </main>
+
+  <!-- RIGHT PANEL -->
+  <aside class="right-panel">
+    <div class="search-box" onclick="alert('Search functionality')">
+      🔍 Search Songs
     </div>
 
-  </section>
-
-  <!-- RECOMMENDED -->
-  <section>
-    <h2>Recommended For You</h2>
-
-    <div class="song-list">
-      <div class="song-card">
-        <h3>Believer</h3>
-        <p>Imagine Dragons</p>
-        <span>Energetic</span>
-      </div>
-
-      <div class="song-card">
-        <h3>Levitating</h3>
-        <p>Dua Lipa</p>
-        <span>Party</span>
-      </div>
-
-      <div class="song-card">
-        <h3>Blinding Lights</h3>
-        <p>The Weeknd</p>
-        <span>Night</span>
-      </div>
-
-      <div class="song-card">
-        <h3>Someone You Loved</h3>
-        <p>Lewis Capaldi</p>
-        <span>Sad</span>
-      </div>
+    <div class="trend-card">
+      <h3>🔥 Popular Now</h3>
+      <ul>
+        <li>🎶 Blinding Lights</li>
+        <li>🎶 Flowers</li>
+        <li>🎶 Calm Down</li>
+        <li>🎶 Anti-Hero</li>
+      </ul>
     </div>
-  </section>
 
-</main>
+    <div class="trend-card">
+      <h3>⭐ Trending Artists</h3>
+      <ul>
+        <li>👤 Arijit Singh</li>
+        <li>👤 The Weeknd</li>
+        <li>👤 Dua Lipa</li>
+        <li>👤 Taylor Swift</li>
+      </ul>
+    </div>
+  </aside>
 
-<!-- ================= FOOTER ================= -->
+</div>
+
+<!-- FOOTER -->
 <footer>
-  © 2026 Music Player — Crafted with ❤️
+  <span>Made with Harmony & Music 🎶</span>
+  <button onclick="toggleTheme()">🌗 Toggle Theme</button>
 </footer>
 
+<!-- JS -->
 <script src="js/script.js"></script>
 </body>
 </html>
-
